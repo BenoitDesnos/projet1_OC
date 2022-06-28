@@ -218,9 +218,11 @@ input:focus {
   margin-top: 40px;
 }
 .main__container h2:last-child {
+  display: inline-block;
   margin-left: 20px;
   margin-top: 25px;
   margin-bottom: 40px;
+  cursor: pointer;
 }
 .lodgings__container {
   display: flex;
@@ -318,6 +320,11 @@ input:focus {
 }
 .popular__lodging header {
   width: 100%;
+}
+.popular__lodging header i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .card-popular {
   display: flex;
