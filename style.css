@@ -13,6 +13,7 @@ html {
 }
 body {
   font-family: "Raleway", sans-serif;
+  overflow-x: hidden;
 }
 main {
   position: relative;
@@ -56,7 +57,7 @@ header {
 .logo {
   width: 120px;
   padding-top: 49px;
-  padding-left: 20px;
+  padding-left: 0px;
 }
 
 nav ul {
@@ -66,22 +67,18 @@ nav ul {
   padding-top: 52px;
 }
 
-nav a:not(:hover) {
+nav a {
   padding: 49px 20px 30px 20px;
   border-top: transparent solid 4px;
   color: inherit;
 }
-nav a {
+nav a:hover {
   border-top: #0065fc solid 4px;
   color: #0065fc;
   padding: 49px 20px 30px 20px;
   cursor: pointer;
 }
-nav a:focus {
-  border-top: #0065fc solid 4px;
-  color: #0065fc;
-  padding: 49px 20px 30px 20px;
-}
+
 .search {
   padding-top: 30px;
 }
@@ -103,6 +100,7 @@ nav a:focus {
   justify-content: center;
   align-items: center;
   background-color: #f2f2f2;
+  font-size: 19px;
   border-radius: 15px 0 0 15px;
 }
 .search__bar button {
@@ -115,12 +113,20 @@ nav a:focus {
   font-weight: 700;
   cursor: pointer;
 }
+#mobileButton {
+  display: none;
+}
 #searchBar {
   width: 55%;
   border: none;
   font-size: 17px;
   font-weight: 700;
   padding-left: 15px;
+}
+input::placeholder {
+  color: black;
+  font-weight: 700;
+  font-size: 17px;
 }
 textarea:focus,
 input:focus {
@@ -238,7 +244,7 @@ input:focus {
   background-color: white;
   width: 245px;
   height: 195px;
-  background-image: url(./images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg);
+  background-image: url(./images/hebergements/3_medium/marcus-loke-WQJvWU_HZFo-unsplash.jpg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position-x: center;
@@ -520,4 +526,210 @@ footer {
 .help {
   width: 34%;
   height: 100%;
+}
+
+/* ------------------ Média queries --------------- */
+
+@media screen and (max-width: 992px) {
+  .city__lodging {
+    flex-direction: column-reverse;
+  }
+  .main__lodging {
+    width: 80%;
+    margin-top: 30px;
+    margin: auto;
+    margin-top: 20px;
+  }
+  .popular__lodging {
+    width: 80%;
+    margin-top: 30px;
+    margin: auto;
+    max-height: none;
+    padding-bottom: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .card-popular {
+    width: 400px;
+    margin: auto;
+  }
+  .card-popular .lodging__cards {
+    width: 100%;
+  }
+  .card-popular:nth-child(2) {
+    margin-top: 20px;
+  }
+  .filter__bar {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .filter__bar ul {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .filters {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0;
+  }
+  .filter {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .header__logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header__logo img {
+    padding: 25px 0 0 0;
+  }
+  nav ul {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  nav ul li {
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  nav a {
+    display: block;
+    padding: 35px 0 15px 0;
+    border-bottom: #f2f2f2 solid 4px;
+    color: inherit;
+    width: 100%;
+    border-top: none;
+  }
+  nav a:hover {
+    display: block;
+    width: 100%;
+    padding: 35px 0 15px 0;
+    border-top: none;
+    border-bottom: #0065fc solid 4px;
+    color: #0065fc;
+
+    cursor: pointer;
+  }
+  .popular__lodging header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 400px;
+    width: 80%;
+  }
+  .popular__lodging {
+    width: 120%;
+    padding: 40px 0 40px 0;
+    margin: 0;
+    border-radius: 0;
+    transform: translateX(-8%);
+  }
+
+  .card-popular {
+    width: 80%;
+    max-width: 400px;
+  }
+  .main__lodging {
+    background-color: transparent;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .main__container {
+    width: 100%;
+    margin: 0;
+  }
+  .main__container h1 {
+    max-width: 350px;
+    margin: auto;
+    display: block;
+  }
+  .lodgings__container a {
+    max-width: 350px;
+    width: 100%;
+    margin: 20px 0 0 0;
+    box-sizing: content-box;
+  }
+  .cards__text {
+    width: 101È;
+  }
+  .lodging__cards {
+    width: 100%;
+    background-size: cover;
+    background-position-y: -52px;
+  }
+  .card:nth-child(2) .lodging__cards {
+    background-size: cover;
+    background-position-y: -60px;
+  }
+  .card:nth-child(3) .lodging__cards {
+    background-size: cover;
+    background-position-y: -60px;
+  }
+  .card:nth-child(4) .lodging__cards {
+    background-size: cover;
+    background-position-y: -105px;
+  }
+  .card:nth-child(5) .lodging__cards {
+    background-size: cover;
+    background-position-y: -44px;
+  }
+  .card:nth-child(6) .lodging__cards {
+    background-size: cover;
+    background-position-y: -200px;
+  }
+  #desktopButton {
+    display: none;
+  }
+  .search__bar {
+    width: 333px;
+  }
+  #mobileButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    background-color: #0065fc;
+    border-radius: 15px;
+  }
+  #searchBar {
+    width: 70%;
+  }
+  #mobileButton i {
+    width: 20%;
+    color: white;
+    font-size: 17px;
+    background-color: #0065fc;
+  }
+  .search__bar i {
+    width: 15%;
+    color: black;
+  }
+  .activities__container {
+    flex-direction: column;
+  }
+  .activities {
+    width: 100%;
+  }
 }
