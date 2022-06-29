@@ -21,7 +21,8 @@ main {
   width: 90%;
   margin: auto;
 }
-h1 {
+h1,
+.article__title {
   font-size: 23px;
 }
 h2 {
@@ -138,11 +139,12 @@ input:focus {
   align-items: center;
   margin: 40px 0 40px 0;
 }
-.filter__bar ul {
+.filter__bar .filters {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  padding-left: 40px;
 }
 .filter {
   border: #d8d7d7 solid 2px;
@@ -163,7 +165,7 @@ input:focus {
   color: #deebff;
   background-color: #0065fc;
 }
-.filter:hover li {
+.filter:hover p {
   transform: translateX(-42px);
   transition: all 0.3s;
 }
@@ -182,7 +184,7 @@ input:focus {
   left: 0;
   transition: all 0.3s;
 }
-.filter li {
+.filter p {
   padding: 0 20px 0 62px;
   transition: all 0.3s;
 }
@@ -200,8 +202,11 @@ input:focus {
   border-radius: 100px;
   border: #d4d4d4 solid 1px;
   width: 25px;
+  min-width: 25px;
   height: 25px;
+  min-height: 25px;
   margin-right: 10px;
+  font-size: 15px;
 }
 
 .city__lodging {
@@ -219,7 +224,7 @@ input:focus {
   width: 95%;
   margin: auto;
 }
-.main__container h1 {
+.main__container .article__title {
   margin-left: 20px;
   margin-top: 40px;
 }
@@ -389,7 +394,7 @@ input:focus {
   margin-top: 60px;
   margin-bottom: 60px;
 }
-.city__activities h1 {
+.city__activities .article__title {
   margin-bottom: 25px;
 }
 .activities__container {
@@ -564,10 +569,11 @@ footer {
     justify-content: flex-start;
     align-items: flex-start;
   }
-  .filter__bar ul {
+  .filter__bar .filters {
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
+    padding-left: 0px;
   }
   .filters {
     flex-wrap: wrap;
@@ -652,7 +658,7 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    max-width: 400px;
+    max-width: 350px;
     width: 90%;
   }
   .popular__lodging {
@@ -676,7 +682,7 @@ footer {
     width: 100%;
     margin: 0;
   }
-  .main__container h1 {
+  .main__container .article__title {
     max-width: 350px;
     width: 90%;
     margin: auto;
@@ -743,6 +749,11 @@ footer {
   .search__bar i {
     width: 15%;
     color: black;
+  }
+  .city__activities .article__title {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto 25px auto;
   }
   .activities__container {
     flex-direction: column;
