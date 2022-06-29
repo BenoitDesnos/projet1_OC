@@ -581,6 +581,23 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+  main {
+    margin: 0;
+    width: 100%;
+  }
+  article {
+    margin: auto;
+    width: 90%;
+  }
+  .city__infos {
+    margin: auto;
+    width: 90%;
+    padding-bottom: 30px;
+  }
+  .city__lodging {
+    margin: 0;
+    width: 100%;
+  }
   header {
     flex-direction: column;
     justify-content: center;
@@ -636,19 +653,18 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     max-width: 400px;
-    width: 80%;
+    width: 90%;
   }
   .popular__lodging {
-    width: 120%;
+    width: 100%;
     padding: 40px 0 40px 0;
     margin: 0;
     border-radius: 0;
-    transform: translateX(-8%);
   }
 
   .card-popular {
-    width: 80%;
-    max-width: 400px;
+    width: 90%;
+    max-width: 350px;
   }
   .main__lodging {
     background-color: transparent;
@@ -662,17 +678,19 @@ footer {
   }
   .main__container h1 {
     max-width: 350px;
+    width: 90%;
     margin: auto;
     display: block;
   }
-  .lodgings__container a {
+
+  .card {
     max-width: 350px;
-    width: 100%;
-    margin: 20px 0 0 0;
+    width: 90%;
+    margin: 20px auto 0 auto;
     box-sizing: content-box;
   }
   .cards__text {
-    width: 101È;
+    width: 100%;
   }
   .lodging__cards {
     width: 100%;
@@ -731,5 +749,94 @@ footer {
   }
   .activities {
     width: 100%;
+    max-width: none;
+    height: auto;
+  }
+  #activities {
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  .activity {
+    height: 190px;
+    max-width: 350px;
+    margin-bottom: 20px;
+  }
+  .activity-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 0px -20px;
+  }
+  /* --------- 2eme section activités à marseille ---------- */
+  .activities:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+  }
+  .activities:nth-child(2) .activity:first-child {
+    max-height: none;
+  }
+  .activities:nth-child(2) .activity:nth-child(2) {
+    max-height: none;
+  }
+  .activities:nth-child(2) .activity-img {
+    width: 100%;
+    min-width: 302px;
+
+    object-position: 0px -180px;
+  }
+  .activities:nth-child(2) .activity:nth-child(2) .activity-img {
+    width: 100%;
+    min-width: 302px;
+
+    object-position: 0px -20px;
+  }
+  /* --------- 4eme section activités à marseille ---------- */
+  .activities:nth-child(4) {
+    display: flex;
+    justify-content: space-between;
+  }
+  .activities:nth-child(4) .activity:first-child {
+    max-height: none;
+  }
+  .activities:nth-child(4) .activity:nth-child(2) {
+    max-height: none;
+  }
+  .activities:nth-child(4) .activity:first-child .activity-img {
+    object-position: 0px -15px;
+  }
+  .activities:nth-child(4) .activity-img {
+    height: 100%;
+    width: 500px;
+    object-fit: cover;
+    object-position: 0px -40px;
+  }
+  /* ------------------------------------------- ---------- */
+
+  footer {
+    flex-direction: column;
+    height: auto;
+  }
+  footer div {
+    margin-top: 40px;
+  }
+
+  .footer__container {
+    flex-direction: column;
+  }
+  .footer__container ul {
+    height: auto;
+  }
+  .about {
+    height: auto;
+    width: auto;
+  }
+  .about__lodging {
+    height: auto;
+    width: auto;
+  }
+  .help {
+    height: auto;
+    width: auto;
+    margin-bottom: 40px;
   }
 }
