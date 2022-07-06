@@ -1,9 +1,3 @@
-.stockage {
-  color: #0065fc;
-  color: #deebff;
-  color: #f2f2f2;
-  font-family: "Raleway", sans-serif;
-}
 html {
   scroll-behavior: smooth;
 }
@@ -46,7 +40,6 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
   position: relative;
   max-width: 1415px;
   width: 90%;
@@ -60,14 +53,12 @@ header {
   padding-top: 49px;
   padding-left: 0px;
 }
-
 nav ul {
   display: flex;
   flex-direction: row;
   margin: 0;
   padding-top: 52px;
 }
-
 nav a {
   padding: 49px 20px 30px 20px;
   border-top: transparent solid 4px;
@@ -79,7 +70,6 @@ nav a:hover {
   padding: 49px 20px 30px 20px;
   cursor: pointer;
 }
-
 .search {
   padding-top: 30px;
 }
@@ -117,6 +107,7 @@ nav a:hover {
 #mobileButton {
   display: none;
 }
+
 #searchBar {
   width: 55%;
   border: none;
@@ -208,16 +199,13 @@ input:focus {
   margin-right: 10px;
   font-size: 15px;
 }
-
 .city__lodging {
   display: flex;
   flex-direction: row;
 }
-
 .main__lodging {
   background-color: #f2f2f2;
   width: 68%;
-
   border-radius: 20px;
 }
 .main__container {
@@ -244,7 +232,6 @@ input:focus {
   align-items: center;
   max-width: 886px;
 }
-
 .lodging__cards {
   background-color: white;
   width: 245px;
@@ -288,10 +275,8 @@ input:focus {
   height: 205px;
   padding: 5px;
   margin: 15px;
-
   background-color: white;
   border-radius: 25px;
-
   box-shadow: 0px 5px 17px 6px rgba(0, 0, 0, 0.15);
 }
 .card .cards__text {
@@ -317,7 +302,6 @@ input:focus {
 .grey-star {
   color: #dad8d8;
 }
-
 .popular__lodging {
   background-color: #f2f2f2;
   width: 32%;
@@ -350,9 +334,7 @@ input:focus {
   padding: 5px;
   background-color: #ffffff;
   border-radius: 20px;
-
   box-shadow: 0px 5px 17px 6px rgba(0, 0, 0, 0.15);
-
   margin: 20px 0 20px 0;
 }
 .card-popular:nth-child(3) {
@@ -404,10 +386,8 @@ input:focus {
   display: flex;
   flex-direction: row;
   width: 100%;
-
   justify-content: space-between;
 }
-
 /* --------- 2nd colonne activités à marseille ---------- */
 .activities:nth-child(2) {
   display: flex;
@@ -422,13 +402,11 @@ input:focus {
 .activities:nth-child(2) .activity-img {
   width: 100%;
   min-width: 302px;
-
   object-position: 0px -110px;
 }
 .activities:nth-child(2) .activity:nth-child(2) .activity-img {
   width: 100%;
   min-width: 302px;
-
   object-position: 0px -18px;
 }
 /* --------- 4eme colonne activités à marseille ---------- */
@@ -449,7 +427,6 @@ input:focus {
   object-position: 0px -5px;
 }
 /* ------------------------------------------- ---------- */
-
 .activities {
   width: 24%;
   display: flex;
@@ -462,13 +439,10 @@ input:focus {
 .activity {
   display: flex;
   width: 100%;
-
   height: 445px;
   overflow: hidden;
-
   position: relative;
   border-radius: 20px;
-
   box-shadow: 0px 5px 17px 6px rgba(0, 0, 0, 0.096);
 }
 .activity-img {
@@ -477,21 +451,20 @@ input:focus {
   object-fit: cover;
   object-position: -190px 0px;
 }
-.activity header {
+.activity .activity__title {
   display: flex;
   position: absolute;
   z-index: 2;
   background-color: #ffffff;
   height: 56px;
   width: 100%;
-
   bottom: -2px;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: flex-start;
 }
 .activity h3 {
   margin-left: 20px;
 }
-
 footer {
   display: flex;
   flex-direction: row;
@@ -526,7 +499,6 @@ footer {
 .footer__container li {
   margin-top: 15px;
 }
-
 .about__lodging {
   width: 33%;
   height: 100%;
@@ -535,9 +507,7 @@ footer {
   width: 34%;
   height: 100%;
 }
-
 /* ------------------ Média queries --------------- */
-
 @media screen and (max-width: 992px) {
   main {
     margin: 0;
@@ -567,7 +537,6 @@ footer {
   .filter {
     margin-top: 10px;
   }
-
   .city__infos {
     margin: auto;
     width: 90%;
@@ -609,7 +578,6 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
     width: 650px;
   }
   .card {
@@ -626,7 +594,6 @@ footer {
   .card-popular:nth-child(2) {
     margin-top: 20px;
   }
-
   .card-popular .lodging__cards {
     background-size: 25% 100%;
     background-position-x: 0px;
@@ -645,7 +612,6 @@ footer {
   .activities__container {
     flex-wrap: wrap;
     justify-content: center;
-    align-items: space-between;
   }
   .activities {
     width: 300px;
@@ -660,7 +626,6 @@ footer {
     margin: auto;
   }
 }
-
 @media screen and (max-width: 768px) {
   main {
     margin: 0;
@@ -670,22 +635,12 @@ footer {
     margin: auto;
     width: 90%;
   }
-  .city__infos {
-    margin: auto;
-    width: 90%;
-    padding-bottom: 30px;
-  }
-  .city__lodging {
-    margin: 0;
-    width: 100%;
-  }
   header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
   }
-
   .header__logo {
     width: 100%;
     display: flex;
@@ -726,8 +681,16 @@ footer {
     border-top: none;
     border-bottom: #0065fc solid 4px;
     color: #0065fc;
-
     cursor: pointer;
+  }
+  .city__lodging {
+    margin: 0;
+    width: 100%;
+  }
+  .city__infos {
+    margin: auto;
+    width: 90%;
+    padding-bottom: 30px;
   }
   .popular__lodging .popular__header {
     display: flex;
@@ -742,7 +705,6 @@ footer {
     margin: 0;
     border-radius: 0;
   }
-
   .card-popular {
     width: 90%;
     max-width: 350px;
@@ -778,7 +740,6 @@ footer {
     margin: auto;
     display: block;
   }
-
   .card {
     max-width: 350px;
     width: 90%;
@@ -793,7 +754,6 @@ footer {
     background-size: cover;
     background-position-y: -52px;
   }
-
   .card:nth-child(2) .lodging__cards {
     background-size: cover;
     background-position-y: -60px;
@@ -827,6 +787,15 @@ footer {
     width: 15%;
     background-color: #0065fc;
     border-radius: 15px;
+  }
+  input[type="submit"] {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 3;
   }
   #searchBar {
     width: 70%;
@@ -884,13 +853,11 @@ footer {
   .activities:nth-child(2) .activity-img {
     width: 100%;
     min-width: 302px;
-
     object-position: 0px -180px;
   }
   .activities:nth-child(2) .activity:nth-child(2) .activity-img {
     width: 100%;
     min-width: 302px;
-
     object-position: 0px -20px;
   }
   /* --------- 4eme section activités à marseille ---------- */
@@ -914,7 +881,6 @@ footer {
     object-position: 0px -40px;
   }
   /* ------------------------------------------- ---------- */
-
   footer {
     flex-direction: column;
     height: auto;
@@ -922,7 +888,6 @@ footer {
   footer div {
     margin-top: 40px;
   }
-
   .footer__container {
     flex-direction: column;
   }
