@@ -29,16 +29,16 @@
         </nav>
     </header>
     <main>
-        <div class="search">
+        <section class="search">
             <h1>Trouvez un hébergement pour des vacances de rêve</h1>
             <p>En plein centre ville ou en pleine nature</p>
             <form>
                 <div class="search__bar">
                     <i class="fa-solid fa-location-dot"></i>
                     <input type="search" name="searchBar" id="searchBar" placeholder="Marseille, France" required>
-                    <button id="desktopButton"><span>Rechercher</span></button>
-                    <div id="mobileButton"><i class="fa-solid fa-magnifying-glass"><input type="submit" value=""></i>
-                    </div>
+                    <button type="submit" id="desktopButton"><span>Rechercher</span></button>
+                    <button type="submit" id="mobileButton"><i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
                 </div>
             </form>
             <div class="filter__bar">
@@ -62,12 +62,12 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="city__infos">
-            <i class="fa-solid fa-info"></i>
-            <p>Plus de 500 logements sont disponibles dans cette ville</p>
-        </div>
-        <div class="city__lodging" id="lodging">
+            <div class="city__infos">
+                <i class="fa-solid fa-info"></i>
+                <p>Plus de 500 logements sont disponibles dans cette ville</p>
+            </div>
+        </section>
+        <section class="city__lodging" id="lodging">
             <article class="main__lodging">
                 <div class="main__container">
                     <h2 class="article__title">Hébergements à marseille</h2>
@@ -241,7 +241,7 @@
                     </div>
                 </a>
             </article>
-        </div>
+        </section>
         <article class="city__activities" id="activities">
             <h2 class="article__title">Activités à Marseille</h2>
             <div class="activities__container">

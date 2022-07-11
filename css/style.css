@@ -441,6 +441,10 @@ footer {
     margin: auto;
     width: 90%;
   }
+  .search {
+    width: 90%;
+    margin: auto;
+  }
   .filter__bar {
     flex-direction: column;
     align-items: flex-start;
@@ -455,8 +459,7 @@ footer {
     margin-top: 10px;
   }
   .city__infos {
-    margin: auto;
-    width: 90%;
+    width: 100%;
     padding-bottom: 30px;
   }
   .city__lodging {
@@ -566,19 +569,12 @@ footer {
     color: #0065fc;
     cursor: pointer;
   }
-  .search {
-    width: 90%;
-    margin: auto;
-  }
+
   .city__lodging {
     margin: 0;
     width: 100%;
   }
-  .city__infos {
-    margin: auto;
-    width: 90%;
-    padding-bottom: 30px;
-  }
+
   .popular__lodging .popular__header {
     display: flex;
     justify-content: space-between;
